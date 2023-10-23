@@ -33,12 +33,12 @@
 
 
     <modal class="" id="myModal"> <!-- add the active class to show modal -->
-        <div class="modal-content"> 
+        <div class="modal-content">
             <span class="close" id="closeModal">&#11198;</span>
 
             <div class="tabs"> <!-- add .selected class to turn background red -->
                 <div class="left">
-                    <a href="#" >Log In</a>
+                    <a href="#">Log In</a>
                 </div>
                 <div class="right">
                     <a href="#" class="">Sign Up</a>
@@ -63,7 +63,7 @@
                 <p>
                     <a href="#" class="forgot">I forgot my password</a>
                 </p>
-            
+
             </div>
 
             <div class="member">
@@ -84,11 +84,45 @@
             <button class="search-button"></button>
         </div>
 
-        <div class="result container2">
-            <h3>Results for <span class="search-result"></span></h3>
+        <div class="result container2 hidden"> <!-- remember to remove .hidden class in JS-->
+            <h3>Results for <span class="search-result"></span>:</h3>
         </div>
 
-        
+        <div class="swiper1 ">
+            <div #swiperRef="" class="swiper mySwiper container2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <div class="release container2 hidden">
+            <h3>Latest releases :</h3>
+        </div>
+
+        <div class="swiper2 ">
+            <div #swiperRef="" class="swiper mySwiper2 container2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide A</div>
+                    <div class="swiper-slide">Slide B</div>
+                    <div class="swiper-slide">Slide C</div>
+                    <div class="swiper-slide">Slide D</div>
+                    <div class="swiper-slide">Slide E</div>
+                    <div class="swiper-slide">Slide F</div>
+                </div>
+            </div>
+            <div class="swiper-button-next2"></div>
+            <div class="swiper-button-prev2"></div>
+        </div>
     </main>
 
 
@@ -99,6 +133,8 @@
 
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -189,9 +189,7 @@ label > .rm {
   border: none;
 }
 
-.hidden { /* add LOG IN and SIGN UP buttons */
-  display: none;
-}
+
 
 p > .forgot {
   color: red;
@@ -223,10 +221,11 @@ p > .forgot {
   margin: 0 auto;
   flex-direction: row; 
   justify-content: center;
+  margin-top: 15vh;
 }
 
 .search-input {
-  border-radius: 8px 0px 0px 8px; /* Adjust the border-radius for the left side */
+  border-radius: 8px 0px 0px 8px;
   font-size: 1.2rem;
   padding: 0.5rem;
   border: none;
@@ -252,18 +251,9 @@ p > .forgot {
   background-color: #ff3333;
 }
 
-.result {
-  /* Remember to set display block in JS */
-  font-family: 'Inter', sans-serif;
-  color: #fff;
-  text-align: left;
-  padding: 0;
-  margin-bottom: 5vh;
-  margin-top: 20vh;
-}
-
 .container2 {
   max-width: 1440px;
+  width: 100%;
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -271,4 +261,74 @@ p > .forgot {
   border: 1px solid white;
 }
 
+.result {
+  display: block;/* Remember to set display block in JS */
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 10vh;
+  margin-top: 20vh;
+}
+
 /* S W I P E R - 1*/
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #191B20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev{
+  content: url(./images/Vector\ \(2\).svg);
+}
+
+.swiper-button-next{
+  content: url(./images/Vector\ \(1\).svg);
+}
+
+.release {
+  display: block;/* Remember to set display block in JS */
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 10vh;
+  margin-top: 20vh;
+}
+
+/* S W I P E R - 2*/
+
+.swiper2 {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.swiper-button-prev2 {
+  content: url(./images/Vector\ \(2\).svg);
+}
+
+.swiper-button-next2 {
+  content: url(./images/Vector\ \(1\).svg);
+}
+
+.hidden { /* apply to hide elements is JS */
+  display: none;
+}
