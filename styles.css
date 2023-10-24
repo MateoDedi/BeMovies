@@ -73,7 +73,7 @@ modal {
   display: none;
 }
 
-modal.active {
+.active {
   display: block;
   max-width: 20rem;
   color: #fff;
