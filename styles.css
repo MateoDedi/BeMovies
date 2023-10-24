@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
+
 }
 
 body {
@@ -40,7 +40,7 @@ nav {
   color: red;
 }
 
-ul {
+.nav-tab {
   margin-top: 3vh;
   margin-bottom: 3vh;
   font-size: 1rem;
@@ -48,21 +48,21 @@ ul {
   display: flex;
 }
 
-ul > li {
+.nav-tab>li {
   margin-left: 3vw;
 }
 
-ul > li > a {
+.nav-tab>li>a {
   color: white;
   text-decoration: none;
   transition: color 0.3s, border-bottom 0.3s;
 }
 
-ul > li > a:hover {
+.nav-tab>li>a:hover {
   color: red;
 }
 
-ul > li > a:active {
+.nav-tab>li>a:active {
   color: red;
   border-bottom: 2px solid red;
 }
@@ -100,7 +100,7 @@ modal.active {
   text-decoration: none;
   width: 15rem;
   color: #fff;
-  padding: auto ;
+  padding: auto;
   justify-content: center;
 }
 
@@ -129,15 +129,15 @@ modal.active {
   color: #fff;
 }
 
-.tabs > .a {
+.tabs>.a {
   text-decoration: none;
 }
 
-.tabs > .a:hover {
+.tabs>.a:hover {
   text-decoration: none;
 }
 
-.tabs > .a:active {
+.tabs>.a:active {
   text-decoration: none;
 }
 
@@ -149,18 +149,18 @@ modal.active {
 .txt,
 .pass {
   border-radius: 8px;
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
   color: #000;
 }
 
-label > .rememberMe {
+label>.rememberMe {
   border-radius: 8px;
 }
 
-label > .rm {
+label>.rm {
   margin-left: 1vw;
 }
 
@@ -191,7 +191,7 @@ label > .rm {
 
 
 
-p > .forgot {
+p>.forgot {
   color: red;
 }
 
@@ -199,7 +199,7 @@ p > .forgot {
   padding-bottom: 5vh;
 }
 
-.member > p > .signup-link{
+.member>p>.signup-link {
   color: red;
 
 }
@@ -211,7 +211,7 @@ p > .forgot {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .search-bar {
@@ -219,7 +219,7 @@ p > .forgot {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: center;
   margin-top: 15vh;
 }
@@ -240,7 +240,8 @@ p > .forgot {
   background-size: auto;
   color: white;
   border: none;
-  border-radius: 0px 8px 8px 0px; /* Adjust the border-radius for the right side */
+  border-radius: 0px 8px 8px 0px;
+  /* Adjust the border-radius for the right side */
   font-size: 1.2rem;
   padding: 1rem 1.5rem;
   cursor: pointer;
@@ -251,18 +252,9 @@ p > .forgot {
   background-color: #ff3333;
 }
 
-.container2 {
-  max-width: 1440px;
-  width: 100%;
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid white;
-}
-
 .result {
-  display: block;/* Remember to set display block in JS */
+  display: block;
+  /* Remember to set display block in JS */
   font-family: 'Inter', sans-serif;
   color: #fff;
   text-align: left;
@@ -295,16 +287,33 @@ p > .forgot {
   object-fit: cover;
 }
 
-.swiper-button-prev{
-  content: url(./images/Vector\ \(2\).svg);
+.btn-swiper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-.swiper-button-next{
+.swiper-button-prev {
+  content: url(./images/Vector\ \(2\).svg);
+  position: absolute;
+  left: 180px;
+  cursor: pointer;
+  top: -175px;
+
+}
+
+.swiper-button-next {
   content: url(./images/Vector\ \(1\).svg);
+  position: absolute;
+  right: 180px;
+  cursor: pointer;
+  top: -175px;
 }
 
 .release {
-  display: block;/* Remember to set display block in JS */
+  display: block;
+  /* Remember to set display block in JS */
   font-family: 'Inter', sans-serif;
   color: #fff;
   text-align: left;
@@ -321,14 +330,160 @@ p > .forgot {
   margin: 20px auto;
 }
 
+.btn-swiper2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
 .swiper-button-prev2 {
   content: url(./images/Vector\ \(2\).svg);
+  position: absolute;
+  left: 180px;
+  cursor: pointer;
+  top: -175px;
 }
 
 .swiper-button-next2 {
   content: url(./images/Vector\ \(1\).svg);
+  position: absolute;
+  right: 180px;
+  cursor: pointer;
+  top: -175px;
 }
 
-.hidden { /* apply to hide elements is JS */
+#movie-genre>h2 {
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.genre-table {
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+.genre-table>li>a {
+  margin-left: 5vw;
+
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 7px;
+  width: 84px;
+  height: 33px;
+  letter-spacing: 2px;
+}
+
+.redBgGenres {
+  background: #c00;
+  padding: 7px;
+  width: 84px;
+  height: 33px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.genre-div {
+  border-bottom: 1px solid #fff;
+}
+
+.selected-genre {
+  display: block;
+  /* Remember to set display block in JS */
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 10vh;
+  margin-top: 20vh;
+}
+
+/*  S W I P E R - 3*/
+
+.swiper3 {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.btn-swiper3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.swiper-button-prev3 {
+  content: url(./images/Vector\ \(2\).svg);
+  position: absolute;
+  left: 180px;
+  cursor: pointer;
+  top: -175px;
+}
+
+.swiper-button-next3 {
+  content: url(./images/Vector\ \(1\).svg);
+  position: absolute;
+  right: 180px;
+  cursor: pointer;
+  top: -175px;
+}
+
+/* F O O T E R */
+
+footer {
+  font-family: 'Inria Sans', sans-serif;
+  background: #141517;
+  display: flex;
+}
+
+.foot-nav {
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-cont {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright {
+  color: #B8B8B8;
+  font-family: Inria Sans;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.container2 {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden {
+  /* apply to hide elements is JS */
   display: none;
 }
