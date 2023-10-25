@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&family=Inter:wght@300;400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&family=Inter:wght@300;400;600;700;800&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 
 body {
-  background-color: #191B20;
+  background-color: #191b20;
 }
 
 .container1 {
@@ -20,11 +19,10 @@ body {
   align-items: center;
 }
 
-
 /*  H E A D E R */
 
 nav {
-  font-family: 'Inria Sans', sans-serif;
+  font-family: "Inria Sans", sans-serif;
   background: #141517;
   display: flex;
 }
@@ -48,21 +46,21 @@ nav {
   display: flex;
 }
 
-.nav-tab>li {
+.nav-tab > li {
   margin-left: 3vw;
 }
 
-.nav-tab>li>a {
+.nav-tab > li > a {
   color: white;
   text-decoration: none;
   transition: color 0.3s, border-bottom 0.3s;
 }
 
-.nav-tab>li>a:hover {
+.nav-tab > li > a:hover {
   color: red;
 }
 
-.nav-tab>li>a:active {
+.nav-tab > li > a:active {
   color: red;
   border-bottom: 2px solid red;
 }
@@ -78,7 +76,7 @@ modal {
   max-width: 20rem;
   color: #fff;
   background-color: #000;
-  font-family: 'Inria Sans', sans-serif;
+  font-family: "Inria Sans", sans-serif;
 }
 
 .close {
@@ -129,15 +127,15 @@ modal {
   color: #fff;
 }
 
-.tabs>.a {
+.tabs > .a {
   text-decoration: none;
 }
 
-.tabs>.a:hover {
+.tabs > .a:hover {
   text-decoration: none;
 }
 
-.tabs>.a:active {
+.tabs > .a:active {
   text-decoration: none;
 }
 
@@ -156,11 +154,11 @@ modal {
   color: #000;
 }
 
-label>.rememberMe {
+label > .rememberMe {
   border-radius: 8px;
 }
 
-label>.rm {
+label > .rm {
   margin-left: 1vw;
 }
 
@@ -189,9 +187,7 @@ label>.rm {
   border: none;
 }
 
-
-
-p>.forgot {
+p > .forgot {
   color: red;
 }
 
@@ -199,11 +195,9 @@ p>.forgot {
   padding-bottom: 5vh;
 }
 
-.member>p>.signup-link {
+.member > p > .signup-link {
   color: red;
-
 }
-
 
 /* M A I N */
 
@@ -255,7 +249,7 @@ p>.forgot {
 .result {
   display: block;
   /* Remember to set display block in JS */
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #fff;
   text-align: left;
   padding: 0;
@@ -274,7 +268,7 @@ p>.forgot {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #191B20;
+  background: #191b20;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -295,16 +289,15 @@ p>.forgot {
 }
 
 .swiper-button-prev {
-  content: url(./images/Vector\ \(2\).svg);
+  content: url(./images/Vector\\(2\).svg);
   position: absolute;
   left: 180px;
   cursor: pointer;
   top: -175px;
-
 }
 
 .swiper-button-next {
-  content: url(./images/Vector\ \(1\).svg);
+  content: url(./images/Vector\\(1\).svg);
   position: absolute;
   right: 180px;
   cursor: pointer;
@@ -314,7 +307,7 @@ p>.forgot {
 .release {
   display: block;
   /* Remember to set display block in JS */
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #fff;
   text-align: left;
   padding: 0;
@@ -338,7 +331,7 @@ p>.forgot {
 }
 
 .swiper-button-prev2 {
-  content: url(./images/Vector\ \(2\).svg);
+  content: url(./images/Vector\\(2\).svg);
   position: absolute;
   left: 180px;
   cursor: pointer;
@@ -346,14 +339,14 @@ p>.forgot {
 }
 
 .swiper-button-next2 {
-  content: url(./images/Vector\ \(1\).svg);
+  content: url(./images/Vector\\(1\).svg);
   position: absolute;
   right: 180px;
   cursor: pointer;
   top: -175px;
 }
 
-#movie-genre>h2 {
+#movie-genre > h2 {
   color: #fff;
   font-family: Inter;
   align-items: center;
@@ -374,7 +367,7 @@ p>.forgot {
   gap: 5vw;
 }
 
-.genre-table>li>a {
+.genre-table > li {
   color: #fff;
   text-align: center;
   font-family: Inter;
@@ -400,7 +393,7 @@ p>.forgot {
 .selected-genre {
   display: block;
   /* Remember to set display block in JS */
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #fff;
   text-align: left;
   padding: 0;
@@ -431,7 +424,7 @@ hr {
 }
 
 .swiper-button-prev3 {
-  content: url(./images/Vector\ \(2\).svg);
+  content: url(./images/Vector\\(2\).svg);
   position: absolute;
   left: 180px;
   cursor: pointer;
@@ -439,7 +432,7 @@ hr {
 }
 
 .swiper-button-next3 {
-  content: url(./images/Vector\ \(1\).svg);
+  content: url(./images/Vector\\(1\).svg);
   position: absolute;
   right: 180px;
   cursor: pointer;
@@ -449,7 +442,7 @@ hr {
 /* F O O T E R */
 
 footer {
-  font-family: 'Inria Sans', sans-serif;
+  font-family: "Inria Sans", sans-serif;
   background: #141517;
   display: flex;
 }
@@ -469,7 +462,7 @@ footer {
 }
 
 .copyright {
-  color: #B8B8B8;
+  color: #b8b8b8;
   font-family: Inria Sans;
   font-size: 0.7rem;
   font-style: normal;
