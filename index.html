@@ -6,6 +6,13 @@
     <title>BeMovies</title>
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -95,10 +102,10 @@
       <div class="swiper1">
         <div #swiperRef="" class="swiper mySwiper container2">
           <div class="swiper-wrapper">
-            <!-- <div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div> -->
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
           </div>
         </div>
         <div class="btn-swiper">
@@ -133,12 +140,12 @@
       <div class="genre-div container2">
         <ul class="genre-table">
           <!-- remember to add .redBgGenres to selected genre-->
-          <li><a href="" class="redBgGenres">Comedy</a></li>
-          <li><a href="">Drama</a></li>
-          <li><a href="">Action</a></li>
-          <li><a href="">Romance</a></li>
-          <li><a href="">Fantasy</a></li>
-          <li><a href="">Animation</a></li>
+          <li id="comedy" class="redBgGenres">Comedy</li>
+          <li id="drama">Drama</li>
+          <li id="action">Action</li>
+          <li id="romance">Romance</li>
+          <li id="fantasy">Fantasy</li>
+          <li id="animation">Animation</li>
         </ul>
       </div>
 
@@ -191,13 +198,14 @@
       <div class="quitPopUp"><i class="fa-regular fa-circle-xmark"></i></div>
       <div class="infosPop">
         <div class="posterPop">
-          <img class="posterImg" src="./assets/chihiro.jpg" alt="" />
+          <img class="posterImg" src="" alt="" />
         </div>
         <div class="textPop">
           <h2></h2>
           <p></p>
           <h5>
-            <span><i class="fa-solid fa-star" style="color: #c00"></i></span>8.7
+            <i class="fa-solid fa-star" style="color: #c00"></i>
+            <span></span>
           </h5>
           <span class="genres"></span>
           <div class="resume">
