@@ -78,12 +78,46 @@ form.addEventListener("change", (e) => {
 // FETCH SEARCH INPUT
 
 document.addEventListener("DOMContentLoaded", function () {
+  let genres = {
+    id28: "Action",
+    id12: "Adventure",
+    id16: "Animation",
+    id35: "Comedy",
+    id80: "Crime",
+    id99: "Documentary",
+    id18: "Drama",
+    id10751: "Family",
+    id14: "Fantasy",
+    id36: "History",
+    id27: "Horror",
+    id10402: "Music",
+    id9648: "Mystery",
+    id10749: "Romance",
+    id878: "Science Fiction",
+    id10770: "TV Movie",
+    id53: "Thriller",
+    id10572: "War",
+    id37: "Western",
+  };
+  let genreFunc = (element) => {
+    let arrayOfGenre = element.genre_ids;
+    let movieGenre = [];
+    arrayOfGenre.forEach((cat) => {
+      movieGenre.push(genres[`id${cat}`]);
+    });
+    movieGenre = movieGenre.toString();
+    movieGenre = movieGenre.replaceAll(",", " / ");
+    return movieGenre;
+  };
+
   function createMoviePosterElement(
     posterUrl,
     movieId,
     title,
     releaseDate,
-    voteAverage
+    voteAverage,
+    overview,
+    genre
   ) {
     const img = document.createElement("img");
     img.classList.add("movie-poster");
@@ -100,7 +134,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const titleElement = document.querySelector(".textPop h2");
         const yearElement = document.querySelector(".textPop p");
         const averageElement = document.querySelector(".textPop span");
-        console.log(averageElement);
+        const genreElement = document.querySelector(".genres");
+        const overviewElement = document.querySelector(".resume");
+
         if (posterImg) {
           posterImg.src = posterUrl;
         }
@@ -111,7 +147,13 @@ document.addEventListener("DOMContentLoaded", function () {
           yearElement.textContent = releaseDate.slice(0, 4);
         }
         if (averageElement) {
-          averageElement.textContent = voteAverage;
+          averageElement.textContent = voteAverage.toFixed(1);
+        }
+        if (overviewElement) {
+          overviewElement.textContent = overview;
+        }
+        if (genreElement) {
+          genreElement.textContent = genre;
         }
       }
     });
@@ -134,13 +176,14 @@ document.addEventListener("DOMContentLoaded", function () {
           movie.id,
           movie.title,
           movie.release_date,
-          movie.vote_average
+          movie.vote_average,
+          movie.overview,
+          genreFunc(movie)
         );
 
         const swiperSlide = document.createElement("div");
         swiperSlide.classList.add("swiper-slide");
         swiperSlide.appendChild(moviePoster);
-
         swiperWrapper.appendChild(swiperSlide);
       }
     }
@@ -151,6 +194,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     new Swiper(`.${swiperContainer}`, {});
   }
+
+  //  fetch movies by genres
 
   async function fetchMoviesByGenre(genreId, swiperContainer) {
     try {
@@ -178,9 +223,11 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchMovies(searchResult);
   });
 
+  // fetch movies by result
+
   async function fetchMovies(searchResult) {
     try {
-      const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${searchResult}&language=fr-FR`;
+      const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${searchResult}&language=fr-FR&sort_by=popularity.desc`;
 
       const response = await fetch(apiUrl);
       if (!response.ok) {
@@ -195,12 +242,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Fetch latest releases
+
   async function fetchLatestReleases() {
     const today = new Date();
-    const oneMonthAgo = new Date();
+    let oneMonthAgo = new Date();
     oneMonthAgo.setMonth(today.getMonth() - 1);
 
-    const apiUrlLatest = `https://api.themoviedb.org/3/discover/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&language=fr-FR&sort_by=primary_release_date.desc&primary_release_date.gte=${oneMonthAgo
+    const apiUrlLatest = `https://api.themoviedb.org/3/discover/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&language=fr-FR&sort_by=popularity.desc&sort_by=primary_release_date.desc&primary_release_date.gte=${oneMonthAgo
       .toISOString()
       .slice(0, 10)}&primary_release_date.lte=${today
       .toISOString()
