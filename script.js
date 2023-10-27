@@ -311,9 +311,23 @@ genreItems.forEach((item) => {
   });
 });
 
+// FETCH SEARCH INPUT
 
+    let searchInput = document.querySelector(".search-input");
+    let searchResult = "";
+    searchInput.addEventListener("change", (e) => {
+      searchResult = e.target.value;
+    //   fetchMovies();
+    });
+    let swiperWrapper = document.querySelector('.swiper-wrapper')
 
-
-
-
+    async function fetchMovies() {
+      await fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${searchResult}&language=fr-FR`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          const moviesData = data.results; 
+        });
+    }
 

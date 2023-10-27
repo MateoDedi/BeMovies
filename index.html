@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<<<<<<< HEAD
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +27,136 @@
           <li><a href="#">GENRES</a></li>
           <li><a href="#" class="open-modal">REGISTER</a></li>
           <li><a href="#" class="openModal">SIGN IN</a></li>
+=======
+  <body>
+    <!-- NAV BAR -->
+    <nav>
+      <div class="container1">
+        <div class="title">
+          <h1><span>BE</span>MOVIES</h1>
+        </div>
+        <div class="site-nav">
+          <ul class="nav-tab">
+            <li><a href="#">SEARCH</a></li>
+            <li><a href="#">LATEST</a></li>
+            <li><a href="#">GENRES</a></li>
+            <li><a href="#" class="open-modal">REGISTER</a></li>
+            <li><a href="#" class="openModal">SIGN IN</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MODAL -->
+
+    <modal id="myModal">
+      <!-- add the active class to show modal -->
+      <div class="modal-content">
+        <span class="close" id="closeModal">&#11198;</span>
+
+        <div class="tabs">
+          <!-- add .selected class to turn background red -->
+          <div class="left">
+            <a href="#">Log In</a>
+          </div>
+          <div class="right">
+            <a href="#" class="">Sign Up</a>
+          </div>
+        </div>
+
+        <div class="user-content">
+          <form>
+            <input class="txt" type="text" placeholder="Username" />
+            <input class="pass" type="password" placeholder="Password" />
+          </form>
+
+          <label for="rememberMe">
+            <input type="checkbox" class="rememberMe" />
+            <span class="rm">Remember me</span>
+          </label>
+
+          <div class="btns">
+            <button id="loginButton">LOG IN</button>
+          </div>
+
+          <p>
+            <a href="#" class="forgot">I forgot my password</a>
+          </p>
+        </div>
+
+        <div class="member">
+          <p>Not a member yet? <a href="#" class="signup-link">Sign Up</a></p>
+        </div>
+      </div>
+    </modal>
+
+    <!-- MAIN -->
+
+    <main>
+      <div class="search-bar">
+        <input
+          type="text"
+          name=""
+          id="search"
+          placeholder="ex. Godfather"
+          class="search-input"
+        />
+        <button class="search-button"></button>
+      </div>
+
+      <div class="result container2 hidden">
+        <!-- remember to remove .hidden class in JS-->
+        <h3 id="results">Results for <span class="search-result"></span>:</h3>
+      </div>
+
+      <div class="swiper1">
+        <div #swiperRef="" class="swiper mySwiper container2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+          </div>
+        </div>
+        <div class="btn-swiper">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <div class="release container2">
+        <h3 id="latest-releases">Latest releases :</h3>
+      </div>
+
+      <div class="swiper2">
+        <div #swiperRef="" class="swiper mySwiper2 container2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+          </div>
+        </div>
+        <div class="btn-swiper2">
+          <div class="swiper-button-next2"></div>
+          <div class="swiper-button-prev2"></div>
+        </div>
+      </div>
+
+      <div id="movie-genre">
+        <h2 class="container2">Movies by genre</h2>
+      </div>
+
+      <div class="genre-div container2">
+        <ul class="genre-table">
+          <!-- remember to add .redBgGenres to selected genre-->
+          <li id="comedy" class="redBgGenres">Comedy</li>
+          <li id="drama">Drama</li>
+          <li id="action">Action</li>
+          <li id="romance">Romance</li>
+          <li id="fantasy">Fantasy</li>
+          <li id="animation">Animation</li>
+>>>>>>> 4ecc848a1571f8275600131f41e506ee21f8bf42
         </ul>
       </div>
     </div>
