@@ -1,4 +1,3 @@
-
 let swiper = new Swiper(".mySwiper", {
   slidesPerView: 4, // Show 4 slides at a time
   spaceBetween: 20, // Adjust the space between slides as needed
@@ -24,33 +23,6 @@ let swiper3 = new Swiper(".mySwiper3", {
     nextEl: ".swiper-button-next2", // Next slide button
     prevEl: ".swiper-button-prev2", // Previous slide button
   },
-
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4, // Show 4 slides at a time
-    spaceBetween: 20, // Adjust the space between slides as needed
-    navigation: {
-        nextEl: ".swiper-button-next", // Next slide button
-        prevEl: ".swiper-button-prev", // Previous slide button
-    },
-});
-
-var swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: 4, // Show 4 slides at a time
-    spaceBetween: 20, // Adjust the space between slides as needed
-    navigation: {
-        nextEl: ".swiper-button-next2", // Next slide button
-        prevEl: ".swiper-button-prev2", // Previous slide button
-    },
-});
-
-var swiper3 = new Swiper(".mySwiper3", {
-    slidesPerView: 4, // Show 4 slides at a time
-    spaceBetween: 20, // Adjust the space between slides as needed
-    navigation: {
-        nextEl: ".swiper-button-next2", // Next slide button
-        prevEl: ".swiper-button-prev2", // Previous slide button
-    },
-
 });
 
 //MODAL DISPLAY AND HIDE
@@ -103,7 +75,6 @@ form.addEventListener("change", (e) => {
   console.log(`Password : ${password}`);
 });
 
-
 // FETCH SEARCH INPUT
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -139,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return movieGenre;
   };
 
+ 
   function createMoviePosterElement(
     posterUrl,
     movieId,
@@ -228,7 +200,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function fetchMoviesByGenre(genreId, swiperContainer) {
     try {
-      const apiUrlGenre = `https://api.themoviedb.org/3/discover/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&language=fr-FR&with_genres=${genreId}`;
+      const apiUrlGenre = `https://api.themoviedb.org/3/discover/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&language=fr-FR&with_genres=${genreId}&sort_by=popularity.desc
+      `;
 
       const response = await fetch(apiUrlGenre);
       if (!response.ok) {
@@ -278,11 +251,12 @@ document.addEventListener("DOMContentLoaded", function () {
     let oneMonthAgo = new Date();
     oneMonthAgo.setMonth(today.getMonth() - 1);
 
-    const apiUrlLatest = `https://api.themoviedb.org/3/discover/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&language=fr-FR&sort_by=popularity.desc&sort_by=primary_release_date.desc&primary_release_date.gte=${oneMonthAgo
+    const apiUrlLatest = `https://api.themoviedb.org/3/discover/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&language=fr-FR&sort_by=popularity.desc&primary_release_date.gte=${oneMonthAgo
       .toISOString()
       .slice(0, 10)}&primary_release_date.lte=${today
       .toISOString()
-      .slice(0, 10)}`;
+      .slice(0, 10)}
+`;
 
     try {
       const response = await fetch(apiUrlLatest);
@@ -337,23 +311,9 @@ genreItems.forEach((item) => {
   });
 });
 
-// FETCH SEARCH INPUT
 
-    let searchInput = document.querySelector(".search-input");
-    let searchResult = "";
-    searchInput.addEventListener("change", (e) => {
-      searchResult = e.target.value;
-    //   fetchMovies();
-    });
-    let swiperWrapper = document.querySelector('.swiper-wrapper')
 
-    async function fetchMovies() {
-      await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${searchResult}&language=fr-FR`
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          const moviesData = data.results; 
-        });
-    }
+
+
+
 
