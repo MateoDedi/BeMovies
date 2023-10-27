@@ -1,4 +1,3 @@
-
 let swiper = new Swiper(".mySwiper", {
   slidesPerView: 4, // Show 4 slides at a time
   spaceBetween: 20, // Adjust the space between slides as needed
@@ -24,33 +23,6 @@ let swiper3 = new Swiper(".mySwiper3", {
     nextEl: ".swiper-button-next2", // Next slide button
     prevEl: ".swiper-button-prev2", // Previous slide button
   },
-
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4, // Show 4 slides at a time
-    spaceBetween: 20, // Adjust the space between slides as needed
-    navigation: {
-        nextEl: ".swiper-button-next", // Next slide button
-        prevEl: ".swiper-button-prev", // Previous slide button
-    },
-});
-
-var swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: 4, // Show 4 slides at a time
-    spaceBetween: 20, // Adjust the space between slides as needed
-    navigation: {
-        nextEl: ".swiper-button-next2", // Next slide button
-        prevEl: ".swiper-button-prev2", // Previous slide button
-    },
-});
-
-var swiper3 = new Swiper(".mySwiper3", {
-    slidesPerView: 4, // Show 4 slides at a time
-    spaceBetween: 20, // Adjust the space between slides as needed
-    navigation: {
-        nextEl: ".swiper-button-next2", // Next slide button
-        prevEl: ".swiper-button-prev2", // Previous slide button
-    },
-
 });
 
 //MODAL DISPLAY AND HIDE
@@ -102,7 +74,6 @@ form.addEventListener("change", (e) => {
   console.log(`Username : ${username}`);
   console.log(`Password : ${password}`);
 });
-
 
 // FETCH SEARCH INPUT
 
@@ -336,24 +307,3 @@ genreItems.forEach((item) => {
     item.classList.add("redBgGenres");
   });
 });
-
-// FETCH SEARCH INPUT
-
-    let searchInput = document.querySelector(".search-input");
-    let searchResult = "";
-    searchInput.addEventListener("change", (e) => {
-      searchResult = e.target.value;
-    //   fetchMovies();
-    });
-    let swiperWrapper = document.querySelector('.swiper-wrapper')
-
-    async function fetchMovies() {
-      await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${searchResult}&language=fr-FR`
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          const moviesData = data.results; 
-        });
-    }
-
