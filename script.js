@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return movieGenre;
   };
 
- 
+
   function createMoviePosterElement(
     posterUrl,
     movieId,
@@ -158,6 +158,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
+
+    const quitPopUp = document.querySelector(".quitPopUp");
+    if (quitPopUp) {
+      quitPopUp.addEventListener("click", () => {
+        const popup = document.querySelector(".popup");
+        if (popup) {
+          popup.classList.add("hidden");
+        }
+      });
+    }
 
     return img;
   }
@@ -254,8 +264,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const apiUrlLatest = `https://api.themoviedb.org/3/discover/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&language=fr-FR&sort_by=popularity.desc&primary_release_date.gte=${oneMonthAgo
       .toISOString()
       .slice(0, 10)}&primary_release_date.lte=${today
-      .toISOString()
-      .slice(0, 10)}
+        .toISOString()
+        .slice(0, 10)}
 `;
 
     try {
@@ -313,21 +323,21 @@ genreItems.forEach((item) => {
 
 // FETCH SEARCH INPUT
 
-    let searchInput = document.querySelector(".search-input");
-    let searchResult = "";
-    searchInput.addEventListener("change", (e) => {
-      searchResult = e.target.value;
-    //   fetchMovies();
-    });
-    let swiperWrapper = document.querySelector('.swiper-wrapper')
+let searchInput = document.querySelector(".search-input");
+let searchResult = "";
+searchInput.addEventListener("change", (e) => {
+  searchResult = e.target.value;
+  //   fetchMovies();
+});
+let swiperWrapper = document.querySelector('.swiper-wrapper')
 
-    async function fetchMovies() {
-      await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${searchResult}&language=fr-FR`
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          const moviesData = data.results; 
-        });
-    }
+async function fetchMovies() {
+  await fetch(
+    `https://api.themoviedb.org/3/search/movie?api_key=ed82f4c18f2964e75117c2dc65e2161d&query=${searchResult}&language=fr-FR`
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      const moviesData = data.results;
+    });
+}
 
