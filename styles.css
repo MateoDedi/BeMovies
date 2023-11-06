@@ -216,6 +216,7 @@ p > .forgot {
   flex-direction: row;
   justify-content: center;
   margin-top: 15vh;
+  margin-bottom: 10vh;
 }
 
 .search-input {
@@ -257,12 +258,20 @@ p > .forgot {
   margin-top: 20vh;
 }
 
+#results {
+  margin-bottom: 5vh;
+}
+
 /* S W I P E R - 1*/
 
 .swiper {
   width: 100%;
   height: 300px;
   margin: 20px auto;
+}
+
+.swiper1 {
+  margin-bottom: 10vh;
 }
 
 .swiper-wrapper {
@@ -327,6 +336,7 @@ p > .forgot {
   width: 100%;
   height: 300px;
   margin: 20px auto;
+  margin-bottom: 10vh;
 }
 
 .btn-swiper2 {
@@ -350,6 +360,10 @@ p > .forgot {
   right: 180px;
   cursor: pointer;
   top: -175px;
+}
+
+#movie-genre {
+  margin-top: 20vh;
 }
 
 #movie-genre > h2 {
@@ -417,6 +431,7 @@ hr {
   width: 100%;
   height: 300px;
   margin: 20px auto;
+  margin-bottom: 20vh;
 }
 
 .btn-swiper3 {
@@ -584,7 +599,9 @@ footer {
   display: none;
 }
 
-
+.quitPopUp {
+  color: #fff;
+}
 
 
 
