@@ -507,6 +507,7 @@ footer {
   margin: 10px;
   margin-bottom: 50px;
   color: #fff;
+  cursor: pointer;
 }
 
 .infosPop {
@@ -605,5 +606,71 @@ footer {
   display: none;
 }
 
+@media (max-width: 768px) {
+  .genre-table {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
 
 
+.hamburger {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: red;
+}
+
+/* Add mobile menu styles for when the hamburger is active */
+
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #2b2929;
+    padding: 10px;
+    border: 1px solid red; /* Add a border for better visibility */
+  }
+
+  .mobile-menu.active {
+    display: block;
+    top: 60px;
+    right: 0;
+    background-color: #2b2929;
+    padding: 10px;
+    border: 1px solid red;
+  }
+
+  .nav-tab {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 10px;
+  }
+
+  .nav-tab li {
+    margin: 10px 0;
+  }
+}
