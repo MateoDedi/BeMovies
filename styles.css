@@ -628,6 +628,77 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+  .popup {
+    width: 95%; /* Adjust the width to fit the screen width */
+    height: 90%; /* Allow height to adjust based on content */
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    overflow: scroll;
+  }
+  
+  /* Adjust the margin and size of the close button */
+  .quitPopUp {
+    margin: 10px;
+    margin-bottom: 20px; /* Reduce the bottom margin for mobile */
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .infosPop {
+    display: flex;
+    flex-direction: column; /* Change to column layout for mobile */
+    align-items: center;
+  }
+  
+  .posterImg {
+    width: 100%; /* Adjust the width to fit the screen width */
+    height: auto; /* Allow height to adjust based on the image aspect ratio */
+    margin: 0; /* Remove margins for mobile */
+    margin-top: 10px; /* Adjust top margin as needed */
+  }
+  
+  .textPop h2 {
+    font-size: 18px; /* Reduce the font size for mobile */
+    margin-top: 10px; /* Adjust top margin as needed */
+  }
+  
+  .textPop p {
+    font-size: 12px; /* Reduce the font size for mobile */
+    margin-bottom: 5px; /* Adjust bottom margin as needed */
+  }
+  
+  .textPop h5 {
+    font-size: 18px; /* Reduce the font size for mobile */
+    margin-bottom: 10px;
+  }
+  
+  .fa-star {
+    width: 18px; /* Reduce star icon size */
+    height: 18px;
+    margin-right: 3px;
+  }
+  
+  .genres {
+    font-size: 12px; /* Reduce the font size for mobile */
+    margin-bottom: 10px;
+  }
+  
+  .resume {
+    width: 100%; /* Adjust the width to fit the screen width */
+    height: auto; /* Allow height to adjust based on content */
+    font-size: 14px; /* Reduce the font size for mobile */
+    margin-top: 10px; /* Adjust top margin as needed */
+    line-height: 130%; /* Adjust line height as needed */
+    overflow-y: scroll;
+  }
+
 }
 
 .hamburger-menu {
@@ -690,4 +761,8 @@ footer {
   .nav-tab li {
     margin: 10px 0;
   }
+}
+
+@media (max-width: 768px) {
+  
 }

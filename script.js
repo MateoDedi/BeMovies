@@ -1,4 +1,5 @@
 let swiper = new Swiper(".mySwiper", {
+
   slidesPerView: 4, // Show 4 slides at a time
   spaceBetween: 20, // Adjust the space between slides as needed
   navigation: {
@@ -6,6 +7,7 @@ let swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev", // Previous slide button
   },
 });
+
 
 let swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 4, // Show 4 slides at a time
