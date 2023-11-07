@@ -645,7 +645,7 @@ footer {
 
   .popup {
     width: 95%;
-    height: 90%;
+    height: 95%;
     background: #000;
     display: flex;
     flex-direction: column;
@@ -654,7 +654,8 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     border-radius: 20px;
   }
   
@@ -705,13 +706,16 @@ footer {
   }
   
   .resume {
-    width: 100%; /* Adjust the width to fit the screen width */
-    height: auto; /* Allow height to adjust based on content */
-    font-size: 14px; /* Reduce the font size for mobile */
-    margin: 10px 0 10px 10px;  
-    line-height: 130%; /* Adjust line height as needed */
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    margin: 10px 0 10px 10px;
+    line-height: 130%;
     text-align: justify;
     overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   .hidden {
