@@ -436,6 +436,22 @@ hr {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .genre-table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .genre-table > li {
+    width: 50%;
+  }
+
+  .redBgGenres {
+    background: #c00;
+    border-radius: 7px;
+  }
+}
+
 /*  S W I P E R - 3*/
 
 .swiper3 {
@@ -625,10 +641,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .genre-table {
-    display: flex;
-    flex-direction: column;
-  }
 
   .popup {
     width: 95%; /* Adjust the width to fit the screen width */
