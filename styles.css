@@ -273,9 +273,10 @@ p > .forgot {
 
 .swiper1 {
   width: 100%;
-  height: 300px;
+  height: 400px;
   margin: 20px auto;
   margin-bottom: 10vh;
+  overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -313,6 +314,7 @@ p > .forgot {
   height: 25px;
   margin-top: -25px;
   cursor: pointer;
+  z-index: 500;
 }
 
 .swiper-button-next {
@@ -322,6 +324,7 @@ p > .forgot {
   height: 25px;
   margin-top: -25px;
   cursor: pointer;
+  z-index: 500;
 }
 
 .release {
@@ -339,9 +342,10 @@ p > .forgot {
 
 .swiper2 {
   width: 100%;
-  height: 300px;
+  height: 400px;
   margin: 20px auto;
   margin-bottom: 10vh;
+  overflow: hidden;
 }
 
 .btn-swiper2 {
@@ -436,9 +440,10 @@ hr {
 
 .swiper3 {
   width: 100%;
-  height: 300px;
+  height: 400px;
   margin: 20px auto;
   margin-bottom: 20vh;
+  overflow: hidden;
 }
 
 .btn-swiper3 {
@@ -587,6 +592,11 @@ footer {
   font-weight: 300;
   line-height: 150%; /* 24px */
   letter-spacing: 0.48px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .casting {
